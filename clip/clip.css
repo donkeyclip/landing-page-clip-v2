@@ -1,0 +1,93 @@
+* {
+
+  /*
+    This is an example of how to use MotorCortex's init params in css, using a css variable
+      if you are unfamiliar with css variables here is a quick guide https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#basic_usage
+  */
+  font-family: 'DM Sans', sans-serif;
+  color: white;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+  background-color: #131415 ;
+  position: relative;
+}
+
+.cursor{
+  position: absolute;
+}
+
+.main-title{
+  background-color: #303030;
+  width: 600px;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 30px;
+  left: 50%;
+  top:8%
+}
+.main-title-text{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: break-spaces;
+  overflow: hidden;
+  position: absolute;
+}
+
+.latter{
+  position: relative;
+  top: 100%;
+}
+
+.first-slide{
+  top: 58%;
+}
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 276px);
+  grid-template-rows: repeat(3, 160px); 
+  column-gap: 15px;
+  row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.main-grid-item{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 275px;
+  height: 160px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.grid-card-card{
+  width: 275px;
+  height: 160px;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  position: absolute;
+  border: 10px solid;
+}
