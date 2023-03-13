@@ -55,9 +55,14 @@
   top: 100%;
 }
 
-.first-slide{
+.first-slide,.second-slide{
   top: 58%;
 }
+
+.play-button{
+  position: absolute;
+}
+
 .main-grid{
   display: grid;
   grid-template-columns: repeat(3, 276px);
@@ -80,7 +85,7 @@
     padding: 10px;
 }
 
-.grid-card-card{
+.grid-card{
   width: 275px;
   height: 160px;
   background-color: #262626;
@@ -89,5 +94,17 @@
   align-items: center;
   border-radius: 30px;
   position: absolute;
-  border: 10px solid;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #595961;
+}
+
+.second-slide{
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 830px;
+  height: 504;
 }

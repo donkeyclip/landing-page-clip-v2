@@ -85,6 +85,8 @@ window.top?.postMessage(
 let timeout: ReturnType<typeof setTimeout> = null;
 const player = new Player({
   clip,
+  timeFormat: "ms",
+  pointerEvents: true,
   ...playerOptions,
   onMillisecondChange: (ms) => {
     clearTimeout(timeout);
