@@ -59,9 +59,7 @@
   top: 58%;
 }
 
-.play-button{
-  position: absolute;
-}
+
 
 .main-grid{
   display: grid;
@@ -99,12 +97,126 @@
   border-color: #595961;
 }
 
-.second-slide{
+.clip-wrapper{
+  align-items: center;
   background-color: #262626;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 330px;
+  width: 530px;
+  left: 420px;
+  top: 440px;
+}
+
+.play-button,.pause-button{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.play-bar{
+  align-items: center;
+  background-color: #bf59ff;
+  border-radius: 30px;
+  bottom: 35px;
+  display: flex;
+  height: 14px;
+  justify-content: flex-start;
+  left: 71px;
+  position: absolute;
+  width: 420px;
+}
+
+.play-bar-progress{
+  height: 7px;
+  border-radius: 7px;
+  width: 0px;
+  background-color: #35C7FF;
+  margin-left: 4.5px;
+}
+
+.title-wrapper,.subtitle-wrapper{
+  font-size: 24px;
+  font-weight: 700;
+  height: 35px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 500px;
+}
+
+.heighlight-text{
+  color: #35C7FF;
+}
+
+.title,.subtitle{
+  position: absolute;
+  width:100%;
+}
+
+.product-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 32px;
+  height: 330px;
+  width: 530px;
+  font-size: 16px;
+  font-weight: bold;
+  top: 45%;
+}
+
+.image-wrapper{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.second-slide .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
   border-radius: 30px;
-  width: 830px;
-  height: 504;
+  background-color: #D9D9D9;
+}
+
+.product-text{
+  position: relative;
+}
+
+.product-title-wrapper,.product-description-wrapper,.product-price-wrapper,.product-button-wrapper{
+  height: 29px;
+  overflow: hidden;
+  position: relative;
+  width: 206px;
+}
+
+.product-button-wrapper{
+  height: 50px;
+  margin-top: 7px;
+}
+
+.product-title,.product-description,.product-price,.product-button,.image{
+  position: absolute;
+  top: 0;
+}
+
+.product-button{
+  align-items: center;
+    background-color: #bf59ff;
+    border-radius: 30px;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    width: 170px;
+}
+
+
+.browser{
+  top: 60%;
 }
