@@ -1,48 +1,8 @@
-import { Group, CSSEffect, Combo } from "@donkeyclip/motorcortex";
-import { Left, Opacity, Top, Width } from "./effects/incidents";
+import { CSSEffect, Combo } from "@donkeyclip/motorcortex";
 
-export const ClipIncidents = (selector) => {
-  const myGroup = new Group();
-  // myGroup.addIncident(Opacity(0, 1, `${selector} .play-button`, 10), 0);
-  // myGroup.addIncident(Opacity(1, 0, `${selector} .pause-button`, 10), 0);
-  // myGroup.addIncident(
-  //   Top(`50%`, `155%`, `${selector}  .title, .subtitle`, 400),
-  //   39
-  // );
-  // myGroup.addIncident(
-  //   Top(`156%`, `50%`, `${selector} .title,.subtitle`, 400),
-  //   2000
-  // );
-
-  // myGroup.addIncident(
-  //   Left(
-  //     `0%`,
-  //     `-100%`,
-  //     `${selector} .product-title,.product-description,.product-price,.product-button,.image`,
-  //     400
-  //   ),
-  //   2400
-  // );
-
-  // myGroup.addIncident(
-  //   Width(`410px`, `0px`, `${selector}  .play-bar-progress`, 4650),
-  //   39
-  // );
-
-  // myGroup.addIncident(
-  //   Left(
-  //     `-100%`,
-  //     `0%`,
-  //     `${selector}  .product-title,.product-description,.product-price,.product-button,.image`,
-  //     400
-  //   ),
-  //   4289
-  // );
-
-  // myGroup.addIncident(Opacity(1, 0, `${selector} .play-button`, 10), 4689);
-  // myGroup.addIncident(Opacity(0, 1, `${selector} .pause-button`, 10), 4689);
-  // return myGroup;
-  return new Combo(
+export const ClipIncidents = (selector, half = false) => {
+  const divider = half ? 2 : 1;
+  const myCombo = new Combo(
     {
       incidents: [
         {
@@ -88,7 +48,7 @@ export const ClipIncidents = (selector) => {
             },
           },
           props: {
-            selector: `.title, .subtitle`,
+            selector: ` .title,${selector} .subtitle`,
             duration: 400,
           },
           position: 39,
@@ -104,10 +64,10 @@ export const ClipIncidents = (selector) => {
             },
           },
           props: {
-            selector: `.title, .subtitle`,
+            selector: `.title,${selector} .subtitle`,
             duration: 400,
           },
-          position: 2000,
+          position: 2000 / divider,
         },
         {
           incidentClass: CSSEffect,
@@ -120,10 +80,10 @@ export const ClipIncidents = (selector) => {
             },
           },
           props: {
-            selector: `.product-title,.product-description,.product-price,.product-button,.image`,
+            selector: ` .product-title,${selector} .product-description,${selector} .product-price,${selector} .product-button,${selector} .product-image`,
             duration: 400,
           },
-          position: 2400,
+          position: 2400 / divider,
         },
         {
           incidentClass: CSSEffect,
@@ -137,7 +97,7 @@ export const ClipIncidents = (selector) => {
           },
           props: {
             selector: `.play-bar-progress`,
-            duration: 4650,
+            duration: 4650 / divider,
           },
           position: 39,
         },
@@ -145,17 +105,17 @@ export const ClipIncidents = (selector) => {
           incidentClass: CSSEffect,
           attrs: {
             animatedAttrs: {
-              left: `100%`,
+              left: `-100%`,
             },
             initialValues: {
               left: `0%`,
             },
           },
           props: {
-            selector: `.product-title,.product-description,.product-price,.product-button,.image`,
+            selector: ` .product-title,${selector} .product-description,${selector} .product-price,${selector} .product-button,${selector} .product-image`,
             duration: 400,
           },
-          position: 4289,
+          position: 4290 / divider,
         },
         {
           incidentClass: CSSEffect,
@@ -171,7 +131,7 @@ export const ClipIncidents = (selector) => {
             selector: `.play-button`,
             duration: 10,
           },
-          position: 4689,
+          position: 4290 / divider,
         },
         {
           incidentClass: CSSEffect,
@@ -187,14 +147,13 @@ export const ClipIncidents = (selector) => {
             selector: `.pause-button`,
             duration: 10,
           },
-          position: 4689,
+          position: 4290 / divider,
         },
       ],
     },
     {
       selector: selector,
-      // delay: "@expression(5300*index)",
-      duration: 2000,
     }
   );
+  return myCombo;
 };

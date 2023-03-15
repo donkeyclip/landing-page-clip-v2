@@ -7,27 +7,15 @@
       <span class="latter" mc-for="key,item" mc-of="initParams.secondSlideTitle">{{ item }}</span>
     </div>
   </div>
-  <!-- <div class="first-slide center">
-    <div class="main-grid">
-      <div class="main-grid-item" mc-for="key,item" mc-of="9">
-        <div class="grid-card grid-card-{{key}}"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="92"
-            viewBox="0 0 90 92" fill="none">
-            <path
-              d="M76.5661 59.4175C87.316 53.8098 87.316 38.4267 76.5661 32.819L27.0201 6.97339C17.0337 1.76398 5.08259 9.00909 5.08259 20.2726L5.08259 71.9638C5.08258 83.2274 17.0336 90.4726 27.0201 85.2631L76.5661 59.4175Z"
-              stroke="#595961" stroke-width="10" stroke-linejoin="round" />
-          </svg></div>
-      </div>
-    </div>
-  </div> -->
   <div class="browser center">
     <svg xmlns="http://www.w3.org/2000/svg" width="1033" height="580" viewBox="0 0 1033 580" fill="none">
       <rect width="1032.74" height="580" rx="30" fill="#3E3E3E" />
       <path d="M0 30C0 13.4315 13.4315 0 30 0H1002.74C1019.31 0 1032.74 13.4315 1032.74 30V47.8191H0V30Z"
         fill="#272727" />
-      <rect x="33.1641" y="73.2715" width="172.766" height="32.3936" rx="16.1968" fill="#272727" />
-      <rect x="245.266" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
-      <rect x="364.812" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
-      <rect x="484.359" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
+      <rect class="browser-logo" x="33.1641" y="73.2715" width="172.766" height="32.3936" rx="16.1968" fill="#272727" />
+      <rect class="browser-link" x="245.266" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
+      <rect class="browser-link" x="364.812" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
+      <rect class="browser-link" x="484.359" y="80.2109" width="87.1543" height="18.5106" rx="9.25532" fill="#939292" />
       <rect x="675.641" y="73.2715" width="241.41" height="32.3936" rx="16.1968" fill="#262626" />
       <ellipse cx="53.2128" cy="23.8876" rx="7.71277" ry="7.69231" fill="#59D845" />
       <path
@@ -84,7 +72,7 @@
     </div>
     <div class="product-wrapper center">
       <div class="image-wrapper">
-        <div class="image">{imgUrl}</div>
+        <div class="product-image">{imgUrl}</div>
       </div>
 
       <div class="product-text">
@@ -117,18 +105,19 @@
     </div>
   </div>
 
-  <div class="slide-{{key}} clip-wrapper center" mc-for="key,user" mc-of="initParams.users">
+  <div id="slide-{{key}}" class=" clip-wrapper center" mc-for="key,user" mc-of="initParams.users">
     <div class="title-wrapper">
-      <div class="title center">Hi <span class="heighlight-text" style="color: {{user.color}};">{{user.name}}</span>
+      <div class="title center">Hi <span class="heighlight-text"
+          style="color: rgb({{user.color}});">{{user.name}}</span>
       </div>
     </div>
     <div class="subtitle-wrapper">
       <div class="subtitle center">checkout our new <span class="heighlight-text"
-          style="color: {{user.color}};">{{user.intrest}}</span></div>
+          style="color: rgb({{user.color}});">{{user.intrest}}</span></div>
     </div>
     <div class="product-wrapper center">
       <div class="image-wrapper">
-        <div class="image" style="background: url({{user.product.image}});"></div>
+        <div class="product-image" style="background-image: url({{user.product.image}});"></div>
       </div>
 
       <div class="product-text">
@@ -145,7 +134,6 @@
           <div class="product-button">Buy now</div>
         </div>
       </div>
-
     </div>
     <svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 24 26" fill="none">
       <path
@@ -158,6 +146,26 @@
     </svg>
     <div class="play-bar">
       <div class="play-bar-progress"></div>
+    </div>
+  </div>
+
+  <div class="client-list-wrapper">
+    <div class="client-list-title"> Website Viewers</div>
+    <div class="card-wrapper">
+      <div id="card-{{key}}" class="client-card " mc-for="key,user" mc-of="initParams.users">
+        <div class="cliet-image" style="background-color: rgb({{user.color}});">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="56" viewBox="0 0 62 56" fill="none">
+            <path
+              d="M34.6424 31.5314L46.3507 43.9844C49.3514 47.1759 47.0886 52.4093 42.708 52.4093H19.2914C14.9107 52.4093 12.6479 47.1759 15.6486 43.9844L27.3569 31.5314C29.3314 29.4314 32.6679 29.4314 34.6424 31.5314Z"
+              stroke="black" stroke-width="6" stroke-linejoin="round" />
+            <circle cx="31" cy="11" r="8" stroke="black" stroke-width="6" />
+          </svg>
+        </div>
+        <div class="client-text-wrapper">
+          <div class="client-name">{{user.name}}</div>
+          <div class="client-name">likes {{user.intrest}}</div>
+        </div>
+      </div>
     </div>
   </div>
 

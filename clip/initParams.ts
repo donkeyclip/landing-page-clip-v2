@@ -8,7 +8,7 @@ export default [
         {
           name: "Alice",
           intrest: "shoes",
-          color: "#BF59FF",
+          color: "191, 89, 255",
           product: {
             title: "Hike 4",
             description: "New fashion Shoes",
@@ -19,7 +19,7 @@ export default [
         {
           name: "Bob",
           intrest: "tech",
-          color: "#3EDEFF",
+          color: "62, 222, 255",
           product: {
             title: "Kgbm",
             description: "New headphones",
@@ -30,7 +30,7 @@ export default [
         {
           name: "Little Timmy",
           intrest: "bikes",
-          color: "#EDE75C",
+          color: "237, 231, 92",
           product: {
             title: "Kubel",
             description: "Bes bike for kids",

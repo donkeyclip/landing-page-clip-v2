@@ -59,8 +59,6 @@
   top: 58%;
 }
 
-
-
 .main-grid{
   display: grid;
   grid-template-columns: repeat(3, 276px);
@@ -108,6 +106,10 @@
   width: 530px;
   left: 420px;
   top: 440px;
+}
+
+.clip-wrapper:hover{
+  border: 3px solid #595961 ;
 }
 
 .play-button,.pause-button{
@@ -175,7 +177,7 @@
   overflow: hidden;
 }
 
-.second-slide .image {
+.product-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +185,8 @@
   height: 200px;
   border-radius: 30px;
   background-color: #D9D9D9;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .product-text{
@@ -201,7 +205,7 @@
   margin-top: 7px;
 }
 
-.product-title,.product-description,.product-price,.product-button,.image{
+.product-title,.product-description,.product-price,.product-button,.product-image {
   position: absolute;
   top: 0;
 }
@@ -220,3 +224,51 @@
 .browser{
   top: 60%;
 }
+
+.client-list-wrapper{
+  background-color: #1B1B1B;
+  width: 350px;
+  position: absolute ;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  top: 18%;
+}
+
+
+.client-card{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 15px;
+  width: 300px;
+  border-radius: 30px;
+}
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cliet-image{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 31px;
+}
+
+.browser-logo:hover{
+  fill: #525252
+}
+
+.browser-link:hover{fill:#c7c7c7}

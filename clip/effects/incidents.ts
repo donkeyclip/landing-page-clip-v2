@@ -167,3 +167,27 @@ export const Opacity = (
       delay,
     }
   );
+export const BackGroundColor = (
+  value,
+  initValue,
+  selector,
+  duration,
+  delay: string | number = 0,
+  easing = "linear"
+) =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        backgroundColor: value,
+      },
+      initialValues: {
+        backgroundColor: initValue,
+      },
+    },
+    {
+      selector,
+      duration,
+      easing,
+      delay,
+    }
+  );
