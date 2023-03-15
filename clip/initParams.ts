@@ -24,7 +24,7 @@ export default [
             title: "Kgbm",
             description: "New headphones",
             price: "200$",
-            image: "./images/tech.jpg",
+            image: "./images/tech.png",
           },
         },
         {
