@@ -13,7 +13,8 @@ export default [
             title: "Hike 4",
             description: "New fashion Shoes",
             price: "300$",
-            image: "./images/shoes.jpg",
+            image:
+              "https://donkeyclip.github.io/landing-page-clip-v2/server/images/shoes.jpg",
           },
         },
         {
@@ -24,7 +25,8 @@ export default [
             title: "Kgbm",
             description: "New headphones",
             price: "200$",
-            image: "./images/tech.png",
+            image:
+              "https://donkeyclip.github.io/landing-page-clip-v2/server/images/tech.png",
           },
         },
         {
@@ -35,7 +37,8 @@ export default [
             title: "Kubel",
             description: "Bes bike for kids",
             price: "250$",
-            image: "./images/bike.jpg",
+            image:
+              "https://donkeyclip.github.io/landing-page-clip-v2/server/images//bike.jpg",
           },
         },
       ],
