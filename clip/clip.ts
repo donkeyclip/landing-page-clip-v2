@@ -1,6 +1,5 @@
 import { HTMLClip, setCSSCore } from "@donkeyclip/motorcortex";
 import AnimePluginDefinition from "@donkeyclip/motorcortex-anime";
-
 setCSSCore(AnimePluginDefinition.CSSEffect);
 import css from "./clip.css";
 import html from "./clip.html";
@@ -23,6 +22,7 @@ const clip = new HTMLClip({
       src: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap",
     },
   ],
+  audio: "off",
 });
 
 clip.addIncident(
