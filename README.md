@@ -1,4 +1,6 @@
-# motorcortex-clip-starter
+# MOVED TO https://github.com/donkeyclip/clips
+
+
 
 ## Purpose
 
